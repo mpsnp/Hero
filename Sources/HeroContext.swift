@@ -219,11 +219,13 @@ extension HeroContext {
         // the Snapshot's contentView must have hold the cornerRadius value,
         // since the snapshot might not have maskToBounds set
         contentView.layer.cornerRadius = view.layer.cornerRadius
+        contentView.layer.maskedCorners = view.layer.maskedCorners
         contentView.layer.masksToBounds = true
       }
 
       snapshot.layer.allowsGroupOpacity = false
       snapshot.layer.cornerRadius = view.layer.cornerRadius
+      snapshot.layer.maskedCorners = view.layer.maskedCorners
       snapshot.layer.zPosition = view.layer.zPosition
       snapshot.layer.opacity = view.layer.opacity
       snapshot.layer.isOpaque = view.layer.isOpaque
